@@ -23,7 +23,7 @@ class MathController extends BaseController
     {
         $eq_factory = $this->get('edemy.math.equation_factory');
         //die(var_dump($eq_factory));
-        $this->addEventModule($event, 'index.html.twig', array(
+        $this->addEventModule($event, 'templates/math/index', array(
             'eq_factory' => $eq_factory,
         ));
         
@@ -41,7 +41,7 @@ class MathController extends BaseController
         $eq = new Equation($a, $b, $c);
         $eq->setEventDispatcher($this->get('event_dispatcher'));
         
-        $this->addEventModule($event, "equation.html.twig", array(
+        $this->addEventModule($event, "templates/math/equation", array(
             'eq' => $eq,
         ));
         

@@ -6,8 +6,26 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class eDemyMathBundle extends Bundle
 {
-    static public function getBundleName()
+    public static function getBundleName($type = null)
     {
-        return 'eDemyMathBundle';
+        if ($type == null) {
+
+            return 'eDemyMathBundle';
+        } else {
+            if ($type == 'Simple') {
+
+                return 'Math';
+            } else {
+                if ($type == 'simple') {
+
+                    return 'math';
+                }
+            }
+        }
+    }
+
+    public static function eDemyBundle() {
+
+        return true;
     }
 }
