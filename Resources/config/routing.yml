@@ -1,0 +1,14 @@
+edemy_math_index:
+    path:           /{_locale}/math/index
+    defaults:       { _controller: edemy.main:indexAction }
+    requirements:   { _locale: es|en }
+
+edemy_math_equation_2:
+    path:           /{_locale}/ecuacion/segundo/grado/{a}/{b}/{c}
+    defaults:       { _controller: edemy.main:indexAction }
+    requirements:   { _locale: es|en }
+
+edemy_math_render:
+    path:           /{_locale}/math/render/{eq}
+    defaults:       { _controller: edemy.math:renderLatexAction }
+    requirements:   { _locale: es|en }

@@ -1,0 +1,13 @@
+services:
+    edemy.math:
+        class: "eDemy\MathBundle\Controller\MathController"
+        calls:
+            - [setEventDispatcher, ["@event_dispatcher"]]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    edemy.math.equation_factory:
+        class: "eDemy\MathBundle\Utils\EquationFactory"
+        calls:
+            - [setEventDispatcher, ["@event_dispatcher"]]
+
